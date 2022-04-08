@@ -1,0 +1,294 @@
+:root{
+    --fuenteheading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+
+    --primario:#784d3c;
+    --blanco:#ffffff;
+    --negro:#000000;
+    --claro:#e1e1e1;
+
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+  body{
+      font-family: var(--fuenteParrafos);
+      font-size: 1.6rem;
+      line-height: 2;/**interlineado**/
+  }
+
+  /*GLOBALES**/
+
+  .contenedor{
+      max-width: 120rem;
+      width: 90%;
+      margin: 0 auto;
+  }
+  a{
+      text-decoration: none;
+  }
+  h1,h2,h3,h4{
+      font-family: var(--fuenteheading);
+      line-height: 1.2;
+  }
+  h1{
+      font-size: 4.8rem;
+  }
+  h2{
+      font-size: 4rem;
+  }
+  h3{
+      font-size: 3.2rem;
+  }
+  h4{
+      font-size: 2.8rem;
+  }
+  img{
+      max-width: 100%;
+  }
+
+  /*UTILIDADES**/
+
+  .no-margin{
+      margin: 0;
+  }
+  .no-padding{
+      padding: 0;
+  }
+  .centrar-texto{
+      text-align: center;
+  }
+  /**/
+  /* .webp .header{
+      background-image: url(../img/blog3.webp);
+  }
+  .no-webp .header{
+      background-image: url(../img/blog3l.jpg);
+  } */
+
+  /*HEADER*/
+  .header{
+      background-image: url(../img/bannermate.jpg);
+     height: 60rem;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+
+  }
+  .header__texto{
+      color: var(--blanco);
+      text-align: center;
+      margin-top: 5rem;
+  }
+  @media(min-width: 768px){
+       .header__texto{
+           margin-top: 15rem;
+       }
+  }
+ @media(min-width: 768px){
+      .barra{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+      }
+ }
+ .logo{
+     color: var(--blanco);
+
+ }
+ .logo__nombre{
+     font-weight: 400;
+
+ }
+ .logo__bold{
+     font-weight: 700;
+
+ }
+ @media(min-width: 768px){
+     .navegacion{
+         display: flex;
+         gap: 2rem;
+     }
+      
+}
+ .navegacion__enlace{
+     display: block;
+     text-align: center;
+     font-size: 1.8rem;
+     color: var(--blanco);
+
+ }
+ @media(min-width: 768px){
+    .contenido-principal{
+        display:grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 4rem;
+    }
+ }
+ .entrada{
+     border-bottom: 1px solid var(--claro);
+     margin-bottom: 2rem;
+ }
+ .entrada:last-of-type{
+     border: none;
+     margin-bottom: 0;
+ }
+ .boton{
+     display: block;
+     font-family: var(--fuenteheading) ;
+     color: var(--blanco);
+     text-align: center;
+     padding: 1rem 3rem;
+     font-size: 1.8rem;
+     text-transform: uppercase;
+     font-weight: 700;
+     margin-bottom: 2rem;
+     border: none;
+
+ }
+ @media(min-width: 768px){
+    .boton{
+        display: inline-block;
+    }
+      
+ }
+ .boton:hover{
+     cursor: pointer;
+ }
+ .boton__primario{
+     background-color: var(--negro);
+ }
+ .boton__secundario{
+     background-color: var(--primario);
+ }
+.curso{
+    list-style: none;
+    
+}
+
+.w-curso{
+    border-bottom: 1px solid var(--claro);
+    margin-bottom: 2rem;
+}
+.w-curso:last-of-type{
+    border: none;
+    margin-bottom: 0;
+
+}
+.w-curso__label{
+    font-family: var(--fuenteheading);
+    font-weight: bold;
+
+
+}
+.w-curso__info{
+    font-weight: normal;
+
+
+}
+.w-curso__info,
+.w-curso__label{
+    font-size: 2rem;
+}
+.footer{
+    background-color: var(--negro);
+    padding-bottom: 3rem;
+    margin-top: 4rem;
+}
+.barra{
+    padding: 4rem;
+}
+/**sobre nosotros**/
+@media(min-width: 768px){
+    .sobre-nosotros{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 2rem;
+        align-items: center;
+    }
+  
+     
+}
+
+/**cursos**/
+
+.cursos{
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--claro);
+
+}
+@media(min-width: 768px){
+     .cursos{
+         display: grid;
+         grid-template-columns: 1fr 2fr;
+         column-gap: 2rem;
+     }
+}
+.cursos:last-of-type{
+    border: none;
+}
+.cursos__label{
+    font-family: var(--fuenteheading);
+    font-weight: bold;
+}
+.cursos__info{
+    font-weight: normal;
+}
+.cursos__info,
+.cursos__label{
+    font-size: 2rem;
+}
+
+/** contacto*/
+.error ,
+.correcto{
+    background-color: rgb(185,0,0);
+    text-align: center;
+    padding: 1rem;
+    color:var(--blanco);
+    text-transform: uppercase;
+}
+.contacto-background{
+    background-image: url(../img/bb.jpg);
+    background-repeat: no-repeat;
+    height: 40rem;
+    background-size: cover;
+    background-position: center center;
+}
+
+.formulario{
+    background-color: var(--blanco);
+    margin: -4rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
+
+
+}
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+   
+    
+
+}
+.campo__label{
+    flex: 0 0 9rem;
+    text-align: right;
+    padding-right: 2rem;
+
+}
+.campo__field{
+    flex: 1;
+    border: 1px solid var(--claro);
+    
+}
+
+.campo__field--textarea{
+    height: 20rem;
+
+}
